@@ -1,7 +1,15 @@
 # PDC Estudio
 
 Diseñador de productos personalizados en el navegador: playeras, sudaderas, bolsas y tazas.
-Es un solo archivo (`index.html`) hecho con [Fabric.js 6](https://fabricjs.com); se abre directo en el navegador, sin servidor.
+Hecho con [Fabric.js 6](https://fabricjs.com). Se abre directo en el navegador, sin servidor.
+
+## Estructura
+
+```
+index.html        Estructura de la página
+css/estilos.css   Estilos (tema claro y oscuro, responsive)
+js/app.js         Lógica del editor
+```
 
 ## Funciones
 
@@ -16,7 +24,7 @@ Es un solo archivo (`index.html`) hecho con [Fabric.js 6](https://fabricjs.com);
 
 ## Configuración
 
-Precios, descuentos, resolución de impresión y el `endpoint` para recibir pedidos están en el objeto `CONFIG`, al inicio del script en `index.html`.
+Precios, descuentos, resolución de impresión y el `endpoint` para recibir pedidos están en el objeto `CONFIG`, al inicio de `js/app.js`.
 Si `endpoint` está vacío, el pedido se descarga como archivo; si tiene una URL, se envía por `POST` en JSON.
 
 ## Versión anterior
