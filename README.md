@@ -1,35 +1,24 @@
-### Examples of use
+# PDC Estudio
 
-#### Adding red rectangle to canvas
+Diseñador de productos personalizados en el navegador: playeras, sudaderas, bolsas y tazas.
+Es un solo archivo (`index.html`) hecho con [Fabric.js 6](https://fabricjs.com); se abre directo en el navegador, sin servidor.
 
-```html
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
-    <canvas id="canvas" width="300" height="300"></canvas>
+## Funciones
 
-    <script src="lib/fabric.js"></script>
-    <script>
-        var canvas = new fabric.Canvas('canvas');
+- Cuatro productos con frente y espalda, colores de prenda y área de impresión con medidas en cm.
+- Texto con 10 tipografías, contorno, sombra, espaciado, interlineado y texto en arco.
+- Imágenes (subir o arrastrar) con filtros: quitar fondo blanco, blanco y negro, sepia, invertir y brillo.
+- Formas, dibujo libre y panel de capas (ocultar, bloquear, reordenar).
+- Deshacer/rehacer, copiar/pegar, duplicar, centrar, ajustar al área y atajos de teclado.
+- Cotización en vivo con descuentos por volumen.
+- Guardado automático en el navegador y como archivo `.json`.
+- Descarga de maqueta PNG, arte para impresión (PNG transparente a 200 ppp) y exportación de pedido.
 
-        var rect = new fabric.Rect({
-            top : 100,
-            left : 100,
-            width : 60,
-            height : 70,
-            fill : 'red'
-        });
+## Configuración
 
-        canvas.add(rect);
-    </script>
-</body>
-</html>
-```
+Precios, descuentos, resolución de impresión y el `endpoint` para recibir pedidos están en el objeto `CONFIG`, al inicio del script en `index.html`.
+Si `endpoint` está vacío, el pedido se descarga como archivo; si tiene una URL, se envía por `POST` en JSON.
 
+## Versión anterior
 
-
-**Fabric.js** is a framework that makes it easy to work with HTML5 canvas element. It is an **interactive object model** on top of canvas element. It is also an **SVG-to-canvas parser**.
-
-<a href="http://fabricjs.com/kitchensink" target="_blank"><img src="https://github.com/kangax/fabric.js/raw/master/lib/screenshot.png" style="width:300px;box-shadow:rgba(0,0,0,0.3) 0 0 5px"></a>
+El código original de 2015–2020 sigue disponible en la etiqueta [`v1-2020`](../../tree/v1-2020).
